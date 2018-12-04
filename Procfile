@@ -1,1 +1,1 @@
-web: gunicorn transito.wsgi
+web: gunicorn transito.wsgi --log-file -
