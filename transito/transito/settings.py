@@ -52,7 +52,7 @@ MIDDLEWARE = [
 	'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-ROOT_URLCONF = 'transito.urls'
+ROOT_URLCONF = 'transito.transito.urls'
 
 TEMPLATES = [
     {
