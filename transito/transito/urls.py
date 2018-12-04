@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
 from rest_framework import routers
-from servicio_transito import views
+from transito.servicio_transito import views
 
 router = routers.DefaultRouter()
 router.register(r'users', views.UserViewSet)
