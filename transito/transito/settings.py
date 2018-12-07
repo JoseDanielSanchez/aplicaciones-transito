@@ -144,8 +144,4 @@ REST_FRAMEWORK = {
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_ORIGIN_WHITELIST = (
-    'localhost:3000',
-	'localhost',
-)
+CORS_ORIGIN_WHITELIST ='localhost'
