@@ -18,13 +18,19 @@ from django.urls import path
 from django.conf.urls import url, include
 from rest_framework import routers
 from transito.servicio_transito import views
+from rest_framework.authtoken.views import obtain_auth_token
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
+router.register(r'usuarios', views.UserViewSet)
+router.register(r'grupos', views.GroupViewSet)
+router.register(r'reportes-transito', views.ReportesTransitoViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 	url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^iniciar-sesion/', include('rest_framework.urls', namespace='rest_framework')),
+    path('autenticacion-token/', obtain_auth_token, name='api_token_auth'),
+    path('usuario-en-sesion/', views.UsuarioEnSesion.as_view(), name='usuario-en-sesion'),
+    path('reportes-realizados/', views.ReportesRealizados.as_view(), name='reportes-realizados'),
 ]
+
