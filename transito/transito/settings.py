@@ -41,7 +41,6 @@ INSTALLED_APPS = [
 	'rest_framework',
 	'rest_framework.authtoken',
     'transito.servicio_transito',
-    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +52,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 	'whitenoise.middleware.WhiteNoiseMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
 	'transito.transito.middleware.open_access_middleware'
 ]
 
@@ -144,5 +142,3 @@ REST_FRAMEWORK = {
 }
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
-CORS_ORIGIN_ALLOW_ALL = True
