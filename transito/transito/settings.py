@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 	'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',
-	'transito.middleware.corsMiddleware'
+	'transito.middleware.open_access_middleware'
 ]
 
 ROOT_URLCONF = 'transito.transito.urls'
