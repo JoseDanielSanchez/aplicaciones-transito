@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 	'rest_framework',
 	'rest_framework.authtoken',
-    'servicio_transito',
+    'transito.servicio_transito',
     'corsheaders',
 ]
 
